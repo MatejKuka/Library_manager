@@ -127,6 +127,7 @@ public class Controller implements Initializable {
                 authorBookShow.setText(chosenBook.getAuthor());
                 nameBookShow.setText(chosenBook.getName());
                 YearBookShow.setText(String.valueOf(chosenBook.getYear()));
+                imageViewBookShow.setImage(chosenBook.getImage());
         }
 
         @FXML

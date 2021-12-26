@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -55,9 +56,9 @@ public class NewBookController implements Initializable {
 
     @FXML
     void toSaveBook(ActionEvent event) {
-        modelBook.createBook(new Book(textFieldName.getText(), textFieldAuthor.getText(),choiceBoxCategory.getSelectionModel().getSelectedItem(),Integer.parseInt(textFieldYear.getText())));
+        modelBook.createBook(new Book(textFieldName.getText(), textFieldAuthor.getText(),choiceBoxCategory.getSelectionModel().getSelectedItem(),Integer.parseInt(textFieldYear.getText()), new Image("kniha14.jpg")));
         Stage stage = (Stage) buttonSave.getScene().getWindow();
         stage.close();
-    }
+    }// TODO add option to add any image which the customer wants (5th parameter for images of books)
 
 }

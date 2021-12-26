@@ -10,9 +10,9 @@ public class Book {
     Category category;
     String description;
     Integer year;
-    Image image; // TODO later this should be used parameter
+    Image image;
 
-    public Book(String name, String author, Category category, Integer year){
+    public Book(String name, String author, Category category, Integer year, Image image){
         this.author = author;
         this.category = category;
         this.image = image;
@@ -66,8 +66,8 @@ public class Book {
         return image;
     }
 
-    public void setImage(Image image) {
-        this.image = image;
+    public void setImage(String image) {
+        this.image = new Image(getClass().getResourceAsStream(image));
     }
 
     public void setId(Integer id) {
