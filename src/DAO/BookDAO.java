@@ -20,14 +20,30 @@ public class BookDAO implements IBookDAO{
 
     @Override
     public Book createBook(Book book) {
-        allBooksList.add(book);
+        if (book.getID() != null){
+            allBooksList.add(book);
+        }
+
+        if (book.getID() == null){
+            book.setID(getNextId());
+            allBooksList.add(book);
+        }
         return book;
     }
 
-    /*@Override
+    @Override
     public int getNextId() {
+        List<Integer> usedIds = getAllBooks().stream().map(Book::getID).toList();
+
+        for (int id = 1; id <= getAllBooks().size()+1; id++)
+        {
+            if (!usedIds.contains(id))
+            {
+                return id;
+            }
+        }
         return 0;
-    }*/
+    }
 
     @Override
     public void deleteBook(Book bookToDelete) {
@@ -59,7 +75,10 @@ public class BookDAO implements IBookDAO{
         createBook(new Book("Yes,chef!", "Marcus Samuelsson", Category.Cestopis,2014, new Image("kniha6.jpg")));
         createBook(new Book("Finest dining", "Gordon Ramsey", Category.Politickévedy, 2004, new Image("kniha7.jpg")));
         createBook(new Book("16 etických dilém", "Roman Keres", Category.Spoločenskévedy, 2021, new Image("kniha8.jpg")));
-    }
+        for (Book book:allBooksList) {
+            System.out.println(book.getID());
+        }
+    }//TODO method for getting ID does not work
 
     @Override
     public void removeFromWishList(Book bookFromWishList) {

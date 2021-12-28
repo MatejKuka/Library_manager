@@ -7,7 +7,7 @@ import java.util.List;
 public interface IBookDAO {
 
     public Book createBook(Book book);
-    //public int getNextId();
+    public int getNextId();
     public void deleteBook(Book bookToDelete);
     public List<Book> getAllBooks();
     public List<Book> getWishList();

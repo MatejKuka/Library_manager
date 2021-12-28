@@ -12,6 +12,11 @@ public class DAOBookSQL implements IBookDAO{
     }
 
     @Override
+    public int getNextId() {
+        return 0;
+    }
+
+    @Override
     public void deleteBook(Book bookToDelete) {
 
     }

@@ -18,6 +18,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -141,7 +142,7 @@ public class Controller implements Initializable {
         @FXML
         void toGalleryView(ActionEvent event) throws IOException {
                 Stage stage = new Stage();
-                Parent root = FXMLLoader.load(getClass().getResource("/GUI/Views/NewUIView.fxml"));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/Views/NewUIView.fxml")));
                 stage.setTitle("LibraryManager");
                 stage.setScene(new Scene(root));
                 stage.show();

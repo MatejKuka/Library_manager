@@ -4,7 +4,7 @@ package BE;
 import javafx.scene.image.Image;
 
 public class Book {
-    Integer id;
+    static Integer ID = 0;
     String name;
     String author;
     Category category;
@@ -19,7 +19,7 @@ public class Book {
         this.description = description;
         this.year = year;
         this.name = name;
-        this.id = id;
+        this.ID = ID++;
     }
 
     public String getName() {
@@ -70,8 +70,12 @@ public class Book {
         this.image = new Image(getClass().getResourceAsStream(image));
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setID(Integer id) {
+        this.ID = ID++;
+    }
+
+    public Integer getID() {
+        return ID;
     }
 
     @Override

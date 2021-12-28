@@ -4,6 +4,7 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
@@ -12,52 +13,51 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.NewBookController">
    <children>
-      <VBox layoutX="63.0" layoutY="14.0" prefHeight="366.0" prefWidth="487.0">
+      <VBox alignment="CENTER_LEFT" layoutX="63.0" layoutY="14.0" prefHeight="366.0" prefWidth="404.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="69.0" prefWidth="487.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="487.0">
                <children>
-                  <Label text="Here you can add your new book">
+                  <Label alignment="TOP_RIGHT" text="Here you can add your new book">
                      <font>
                         <Font name="System Bold" size="25.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="487.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="487.0">
                <children>
                   <Label text="Name:" />
                   <Pane prefHeight="46.0" prefWidth="17.0" />
                   <TextField fx:id="textFieldName" />
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="487.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="487.0">
                <children>
                   <Label text="Author:" />
                   <Pane prefHeight="46.0" prefWidth="17.0" />
                   <TextField fx:id="textFieldAuthor" />
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="487.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="487.0">
                <children>
-                  <Label text="Year:" />
-                  <Pane prefHeight="46.0" prefWidth="17.0" />
+                  <Label prefHeight="18.0" prefWidth="38.0" text="Year:" />
+                  <Pane prefHeight="42.0" prefWidth="46.0" />
                   <TextField fx:id="textFieldYear" prefHeight="26.0" prefWidth="68.0" />
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="487.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="487.0">
                <children>
                   <Label text="Category:" />
                   <Pane prefHeight="46.0" prefWidth="17.0" />
                   <ChoiceBox fx:id="choiceBoxCategory" prefWidth="150.0" />
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="487.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="360.0">
                <children>
                   <Label text="Image:" />
                   <Pane prefHeight="46.0" prefWidth="17.0" />
-                  <TextField fx:id="textFieldImage" />
-                  <Pane prefHeight="46.0" prefWidth="17.0" />
-                  <Button mnemonicParsing="false" onAction="#toChooseImage" text="Choose">
+                  <Pane prefHeight="42.0" prefWidth="43.0" />
+                  <Button fx:id="chooseFileButton" mnemonicParsing="false" onAction="#toChooseImageFromFile" text="Choose">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -80,5 +80,6 @@
             </HBox>
          </children>
       </VBox>
+      <ImageView fx:id="chosenImageBook" fitHeight="209.0" fitWidth="219.0" layoutX="358.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
