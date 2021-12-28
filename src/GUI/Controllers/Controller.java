@@ -16,7 +16,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -64,6 +63,15 @@ public class Controller implements Initializable {
         @FXML
         private MenuItem galleryView;
 
+        @FXML
+        private MenuItem addBookMItem;
+
+        @FXML
+        private MenuItem deleteBookMItem;
+
+        @FXML
+        private MenuItem closeSystemMI;
+
 
         private Parent root;
         private BookModel modelBook;
@@ -83,7 +91,7 @@ public class Controller implements Initializable {
         }
 
         @FXML
-        void toAddBook(ActionEvent event) {
+        void toAddBookMenu(ActionEvent event) {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/Views/NewBookView.fxml"));
                 try {
                         root = loader.load();
@@ -93,10 +101,10 @@ public class Controller implements Initializable {
                 stage.show();
         }
         @FXML
-        void toCloseApp(ActionEvent event) {System.exit(0);}
+        void toCloseSystemM(ActionEvent event) {System.exit(0);}
 
         @FXML
-        void toDeleteBook(ActionEvent event) {
+        void toDeleteBookM(ActionEvent event) {
                 Book bookToDelete = tableViewBook.getSelectionModel().getSelectedItem();
                 modelBook.deleteBook(bookToDelete);
         }
@@ -139,4 +147,6 @@ public class Controller implements Initializable {
                 stage.show();
 
         }//TODO how to close current stage?
+
+
 }

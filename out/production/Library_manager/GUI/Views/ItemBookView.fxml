@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="itemBook" prefHeight="267.0" prefWidth="214.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.ItemBookController">
+   <children>
+      <ImageView fx:id="imageViewItem" fitHeight="186.0" fitWidth="151.0" layoutX="21.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/kniha1.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelNameBook" alignment="CENTER" layoutX="13.0" layoutY="211.0" prefHeight="27.0" prefWidth="186.0" text="name of the book here">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="iconToWishlist" fitHeight="30.0" fitWidth="30.0" layoutX="172.0" layoutY="14.0" onMouseClicked="#toWishList" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/SceneBuilderLogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
