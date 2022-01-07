@@ -19,11 +19,11 @@ public class BookDAO implements IBookDAO{
 
     @Override
     public Book createBook(Book book) {
-        if (book.getID() != null){
+        if (book.getID() != -1){
             allBooksList.add(book);
         }
 
-        if (book.getID() == null){
+        if (book.getID() == -1){
             book.setID(getNextId());
             allBooksList.add(book);
         }
@@ -42,7 +42,7 @@ public class BookDAO implements IBookDAO{
             }
         }
         return 0;
-    }
+    } // method for IDs
 
     @Override
     public void deleteBook(Book bookToDelete) {
@@ -74,10 +74,8 @@ public class BookDAO implements IBookDAO{
         createBook(new Book("Yes,chef!", "Marcus Samuelsson", Category.Cestopis,2014, new Image("kniha6.jpg")));
         createBook(new Book("Finest dining", "Gordon Ramsey", Category.Politickévedy, 2004, new Image("kniha7.jpg")));
         createBook(new Book("16 etických dilém", "Roman Keres", Category.Spoločenskévedy, 2021, new Image("kniha8.jpg")));
-        /*for (Book book:allBooksList) {
-            System.out.println(book.getID());
-        }*/
-    }//TODO method for getting ID does not work
+
+    }
 
     @Override
     public void removeFromWishList(Book bookFromWishList) {

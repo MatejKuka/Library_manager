@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
@@ -62,7 +63,9 @@ public class GalleryController implements Initializable {
         try {
         for (Book book : bookModel.getAllBooks()) {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("ItemBookView.fxml"));
+            //  ./ navigates to the top of the project.
+            // ../ navigates 1 folder back.
+            fxmlLoader.setLocation(getClass().getResource("../Views/ItemBookView.fxml"));
             itemBook = fxmlLoader.load();
             ItemBookController itemBookController = fxmlLoader.getController();
             itemBookController.setData(book);
