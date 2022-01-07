@@ -16,7 +16,7 @@ public class BookModel {
             single_instance = new BookModel();
 
         return single_instance;
-    } // static singleton class
+    }
 
     private BookBLL managerBook;
     public ObservableList<Book> observableListBook;
@@ -36,6 +36,7 @@ public class BookModel {
     public void createBook(Book book){
         Book bookCreated = managerBook.createBook(book);
         observableListBook.add(bookCreated);
+        System.out.println(book.getID());
     }
 
     public void deleteBook(Book book){

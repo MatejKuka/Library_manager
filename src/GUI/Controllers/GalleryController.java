@@ -2,12 +2,10 @@ package GUI.Controllers;
 
 import BE.Book;
 import GUI.Models.BookModel;
-import GUI.Models.UIBookModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;

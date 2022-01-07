@@ -15,9 +15,6 @@ public class BookBLL {
     public Book createBook(Book book){
         return databaseBook.createBook(book);
     }
-    /*public int getNextId(){
-        return databaseBook.getNextId();
-    }*/
 
     public void deleteBook(Book bookToDelete){
          databaseBook.deleteBook(bookToDelete);

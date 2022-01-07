@@ -16,7 +16,7 @@ public class Book {
         this.author = author;
         this.category = category;
         this.image = image;
-        //this.description = description;
+        this.description = description;
         this.year = year;
         this.name = name;
     }
