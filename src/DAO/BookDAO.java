@@ -12,7 +12,6 @@ public class BookDAO implements IBookDAO{
     List<Book> wishListBooks;
 
     public BookDAO(){
-        System.out.println("BookDAO test");
         allBooksList = new ArrayList<>();
         wishListBooks = new ArrayList<>();
         setUpRandomBooks();
@@ -75,9 +74,9 @@ public class BookDAO implements IBookDAO{
         createBook(new Book("Yes,chef!", "Marcus Samuelsson", Category.Cestopis,2014, new Image("kniha6.jpg")));
         createBook(new Book("Finest dining", "Gordon Ramsey", Category.Politickévedy, 2004, new Image("kniha7.jpg")));
         createBook(new Book("16 etických dilém", "Roman Keres", Category.Spoločenskévedy, 2021, new Image("kniha8.jpg")));
-        for (Book book:allBooksList) {
+        /*for (Book book:allBooksList) {
             System.out.println(book.getID());
-        }
+        }*/
     }//TODO method for getting ID does not work
 
     @Override

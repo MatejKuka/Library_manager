@@ -19,7 +19,7 @@ public class Book {
         this.description = description;
         this.year = year;
         this.name = name;
-        this.ID = ID++;
+        //ID = ID++;
     }
 
     public String getName() {
@@ -66,8 +66,8 @@ public class Book {
         return image;
     }
 
-    public void setImage(String image) {
-        this.image = new Image(getClass().getResourceAsStream(image));
+    public void setImage(Image image) {
+        this.image =image;
     }
 
     public void setID(Integer id) {

@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="612.0" prefWidth="881.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.Controller">
+<AnchorPane prefHeight="612.0" prefWidth="881.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.MainController">
    <children>
       <TableView fx:id="tableViewBook" layoutX="440.0" layoutY="51.0" onMouseClicked="#toShowCurrentBook" prefHeight="303.0" prefWidth="422.0">
         <columns>

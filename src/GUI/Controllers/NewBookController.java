@@ -11,10 +11,8 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
@@ -42,7 +40,7 @@ public class NewBookController implements Initializable {
     private Button buttonCancel, buttonSave, chooseFileButton;
 
     private BookModel modelBook = BookModel.getInstance();
-    private Controller controller;
+    private MainController controller;
     File imageFile;
 
     @Override
@@ -64,9 +62,7 @@ public class NewBookController implements Initializable {
             int response = fileChooser.showOpenDialog(null);
             if(response == JFileChooser.APPROVE_OPTION){
                 imageFile = new File(fileChooser.getSelectedFile().getAbsolutePath());
-                /*Image fileToImage = new Image(String.valueOf(ImageIO.read(imageFile)));
-                chosenImageBook.setImage(fileToImage);*/
-            }//TODO how to setImage for ImageView of the file the customer has chosen?
+            }
 
         }
     }

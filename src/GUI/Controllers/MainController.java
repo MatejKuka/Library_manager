@@ -21,7 +21,7 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable {
+public class MainController implements Initializable {
         @FXML
         private TableColumn<Book, String> columnAuthor;
 
