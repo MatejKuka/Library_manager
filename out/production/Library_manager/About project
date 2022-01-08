@@ -3,9 +3,8 @@ Mandatory functions:
 Optional functions:
 - dark mode
 - setting rating for each book
--
 
 TODO´s:
 - design
-- add ID parameter
+- add ID parameter - DONE
 - SQL database implements
